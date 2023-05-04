@@ -54,13 +54,14 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_591EDDA145F74491B44906703EC3D07E }}
           package: .
       
+      - name: Run install
+        run: |
+          npm install
+
       - name: Add execute permissions to sirv
         run: chmod +x ./node_modules/.bin/sirv
 
-
-
       - name: Run start
         run: |
-          npm install
           npm run start
 
