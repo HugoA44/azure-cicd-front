@@ -57,6 +57,10 @@ jobs:
       - name: Add execute permissions to sirv
         run: chmod +x ./node_modules/.bin/sirv
 
+
+
       - name: Run start
-        run: npm run start
+        run: |
+        npm install
+        npm run start
 
