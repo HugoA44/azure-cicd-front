@@ -53,20 +53,3 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_591EDDA145F74491B44906703EC3D07E }}
           package: .
-        
-      - name: Set up Node.js version
-        uses: actions/setup-node@v1
-        with:
-          node-version: '16.x'
-      
-      - name: Run install
-        run: |
-          npm install
-
-      - name: Add execute permissions to sirv
-        run: chmod +x ./node_modules/.bin/sirv
-
-      - name: Run start
-        run: |
-          npm run start
-
