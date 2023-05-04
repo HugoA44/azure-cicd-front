@@ -57,5 +57,5 @@ jobs:
       - name: Run start
         run: |
           npm install
-          npm run start --if-present
+          sudo npm run start --if-present
 
